@@ -1,6 +1,14 @@
 //Patrick Stumbaugh
 //HW3 - smallsh
 
+
+//create using:
+    // gcc --std=gnu99 -o main main.c
+//then run using:
+    // ./main
+
+
+
 #include <sys/wait.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -174,7 +182,7 @@ char* getInputLine()
 	
 	// Save the user's input into a char pointer "userInput"
 	char *userInput = NULL;
-	ssize_t bufsize = 0;
+	size_t bufsize = 0;
 	getline(&userInput, &bufsize, stdin);
 	
 	//check if we need to replace any "$$" with PID number
