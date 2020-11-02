@@ -2,9 +2,9 @@
 //HW3 - smallsh
 
 //create using:
-    // gcc --std=gnu99 -o main main.c
+    // gcc --std=gnu99 -o smallsh main.c
 //then run using:
-    // ./main
+    // ./smallsh
 
 
 #include <sys/wait.h>
@@ -51,7 +51,7 @@ ends with "&" it will be sent to the background processes.
 int main (int argc, char* argv[]) 
 {
 	// get the home directory (from this program's environment variables)
-    char* homeDir = getenv("PWD");
+    char* homeDir = getenv("HOME");
 	
 	//Initialize SITGINT
 	SIGINT_action.sa_handler = SIG_IGN;
@@ -330,7 +330,7 @@ void runCommands(char** parsed, int* inputFlag, int* outputFlag, char* homeDir, 
 		} 
 		else if (WIFSIGNALED(status)) //else, check if exited by terminating signal
 		{
-			printf("terminating signal %d\n", WTERMSIG(status));
+			printf("terminated by signal %d\n", WTERMSIG(status));
 			fflush(stdout);	
 		}
 	} 
