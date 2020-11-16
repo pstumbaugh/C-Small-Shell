@@ -7,7 +7,7 @@ This program will create a small shell for the user to enter commands on. Most c
 ----------------------
 
 To create the executable file:
-    In the same directory as "main.c", type: 
+In the same directory as "main.c", type: 
     gcc --std=gnu99 -o smallsh main.c
 This will create the executable file named "smallsh"
 

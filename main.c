@@ -1,5 +1,4 @@
 //Patrick Stumbaugh
-//HW3 - smallsh
 
 //create using:
     // gcc --std=gnu99 -o smallsh main.c
